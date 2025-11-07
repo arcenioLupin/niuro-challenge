@@ -1,0 +1,39 @@
+version: "3.9"
+services:
+  api:
+    build:
+      context: ./backend-dotnet/Niuro.AuthApi
+    ports:
+      - "5272:5272"
+    container_name: niuro-api
+    restart: unless-stopped
+
+  next:
+    build:
+      context: ./frontend-nextjs
+    ports:
+      - "3000:3000"
+    container_name: niuro-next
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  angular1:
+    build:
+      context: ./frontend-angular1
+    ports:
+      - "4200:4200"
+    container_name: niuro-ang1
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  angular2:
+    build:
+      context: ./frontend-angular2
+    ports:
+      - "4300:4300"
+    container_name: niuro-ang2
+    depends_on:
+      - api
+    restart: unless-stopped

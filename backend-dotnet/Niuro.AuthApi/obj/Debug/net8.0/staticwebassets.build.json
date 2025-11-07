@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "wtYe2n7X9RLMM6h/wqPj0hdPB8aUSdvEgzxVbAXWxwU=",
+  "Source": "Niuro.AuthApi",
+  "BasePath": "_content/Niuro.AuthApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,11 @@
+<div style="padding:24px">
+  <h1>Angular User App</h1>
+
+  <ng-container *ngIf="loading">Loading session...</ng-container>
+
+  <ng-container *ngIf="!loading && me">
+    <p>Welcome, {{ me?.name || me?.phone }}!</p>
+    <p *ngIf="adminName">Admin: {{ adminName }}</p>
+    <button (click)="back()">Go Back to Home (Next)</button>
+  </ng-container>
+</div>

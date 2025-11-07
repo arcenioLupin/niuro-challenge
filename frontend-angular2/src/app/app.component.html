@@ -1,0 +1,16 @@
+<div style="padding:24px">
+  <h1>Angular Admin App</h1>
+
+  <form (submit)="login($event)" *ngIf="!logged" style="display:grid; gap:12px; max-width:320px">
+    <input placeholder="Email" [(ngModel)]="email" name="email" />
+    <input placeholder="Password" [(ngModel)]="password" name="password" type="password" />
+    <button>Login</button>
+  </form>
+
+  <div *ngIf="logged">
+    <h3>Applications</h3>
+    <ul>
+      <li><button (click)="openUser('Alice Admin')">Open First Application</button></li>
+    </ul>
+  </div>
+</div>
